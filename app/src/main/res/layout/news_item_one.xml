@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:translationZ="3dp"
+    android:stateListAnimator="@anim/lift_on_touch"
+    android:layout_marginLeft="@dimen/card_margin_left"
+    android:layout_marginRight="@dimen/card_margin_left"
+    android:layout_marginTop="@dimen/card_margin_top"
+    android:layout_marginBottom="@dimen/card_margin_top"
+    card_view:cardElevation = "3dp"
+    card_view:cardPreventCornerOver="false"
+    card_view:cardUserCompatPadding="true"
+    card_view:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp">
+
+        <TextView
+            android:id="@+id/item_title_tv"
+            android:layout_width="250dp"
+            android:layout_height="60dp"
+            android:text="新闻标题"
+            android:textSize="15dp"
+            android:lines="2"
+            android:ellipsize="end"
+            android:gravity="center_vertical"/>
+
+
+            <TextView
+                android:id="@+id/item_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发布时间"
+                android:textSize="10dp"
+                android:layout_below="@+id/item_title_tv"/>
+
+            <TextView
+                android:id="@+id/item_channel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="频道名称"
+                android:textSize="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/item_time_tv"
+                android:layout_alignTop="@+id/item_time_tv"/>
+
+            <ImageView
+                android:id="@+id/comment_iv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="0dp"
+                android:src="@drawable/comment2"
+                android:layout_toRightOf="@+id/item_channel_tv"
+                android:layout_alignTop="@+id/item_channel_tv"/>
+
+            <TextView
+                android:id="@+id/commentCount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10dp"
+                android:layout_marginLeft="2dp"
+                android:text="0"
+                android:layout_toRightOf="@+id/comment_iv"
+                android:layout_alignTop="@+id/comment_iv"/>
+
+
+        <ImageView
+            android:id="@+id/item_image_iv"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerCrop"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
